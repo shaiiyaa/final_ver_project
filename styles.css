@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+body {
+  background-image: url("img/tile.jpg");
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.header h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 75px;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-decoration: underline;
+  text-shadow: 5px 0 5px whitesmoke;
+  text-align: center;
+}
+
+.form {
+  width: 60%;
+  height: 12em;
+  text-align: center;
+  border: 1px solid grey;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: capitalize;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 70% 30%;
+      grid-template-rows: 70% 30%;
+  background-image: url(img/formbg.jpg);
+  background-repeat: repeat-y;
+  background-size: 100% 40%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.form .input {
+  display: -ms-grid;
+  display: grid;
+  position: absolute;
+  height: 8.2em;
+  width: 60%;
+  -ms-grid-columns: 14% 86%;
+      grid-template-columns: 14% 86%;
+}
+
+.form .input #taskTitle {
+  font-size: 2em;
+  font-weight: bold;
+  font-style: italic;
+  overflow: hidden;
+}
+
+.form .input #taskDetails {
+  margin: 1px 3px;
+  padding: 20px 0px;
+  background: transparent;
+  border: none;
+  font-size: x-large;
+}
+
+.form .deadline {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 14% 43% 43%;
+      grid-template-columns: 14% 43% 43%;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+}
+
+.form .deadline #dlLabel {
+  font-size: 1.3em;
+  font-weight: bold;
+  font-style: italic;
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+
+.form .deadline #dlDate {
+  position: relative;
+  width: 50%;
+  float: left;
+  left: 50px;
+  background: transparent;
+  border: none;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  bottom: 10px;
+}
+
+.form .deadline #dlTime {
+  position: relative;
+  width: 50%;
+  float: left;
+  left: 70px;
+  background: transparent;
+  border: none;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  bottom: 10px;
+}
+
+.form .buttons {
+  margin: 10px;
+}
+
+#notesSec {
+  margin-top: 5%;
+}
+
+#notesSec .classDiv {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#notesSec .classDiv div:hover > button {
+  display: block;
+}
+
+#notesSec .classDiv div:last-child {
+  opacity: 1;
+  -webkit-animation-name: fadeInOpacity;
+          animation-name: fadeInOpacity;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
+@-webkit-keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#notesSec .classDiv div {
+  overflow-wrap: break-word;
+  width: 16em;
+  height: 19em;
+  padding: 50px 3px 50px 3px;
+  text-transform: capitalize;
+  background-image: url(img/notebg.png);
+  background-size: 100% 100%;
+}
+
+#notesSec .classDiv div p:nth-child(1) {
+  overflow-wrap: break-word;
+  overflow-y: scroll;
+  width: 89%;
+  height: 85%;
+}
+
+#notesSec .classDiv div p::-webkit-scrollbar {
+  display: none;
+}
+
+#notesSec .classDiv div p:nth-child(2), #notesSec .classDiv div p:nth-child(3) {
+  margin-left: 10%;
+}
+
+#notesSec .classDiv div button {
+  display: none;
+  background: transparent;
+  border: none;
+  float: right;
+  margin-right: 10%;
+  margin-top: -109%;
+}
+/*# sourceMappingURL=styles.css.map */

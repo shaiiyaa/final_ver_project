@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onLoad="loadTasks(), currentDate()">
+    <div class="header">
+        <h1>my task board</h1>
+    </div>
+    <form id="form" class="form" onSubmit="taskToStorage()">      
+        <div class="img"></div>
+        <div class="input">
+            <label id="taskTitle" >task details:</label>  
+            <textarea id="taskDetails" autofocus oninput="onTyping()"></textarea>        <!--task details-->
+        </div>
+        <div class="deadline">
+            <label for="dlLabel" id="dlLabel">set deadline:</label>
+            <input type="date" id="dlDate" value="">                                     <!--task date-->
+            <input type="time" id="dlTime" value="">                                       <!--task time-->
+        </div>
+        <div class="buttons">
+            <button type="submit" class="btn btn-primary btn-lg">Save Task</button>          <!--save-->
+            <button type="reset" class="btn btn-primary btn-lg">Reset</button>              <!--reset-->
+            <button onClick="clearMemory()" type="button" class="btn btn-primary btn-lg">Clear Memory</button>
+        </div>
+    </form>   
+    <section id="notesSec">
+        <div id="classDiv" class="classDiv"></div>                                          <!--notes section-->
+    </section>   
+   
+</body>
+</html>
